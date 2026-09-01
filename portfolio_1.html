@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Obriant — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #FAFAF7;
+    --ink:       #1D1C1A;
+    --ink-soft:  #59564F;
+    --line:      #E2DFD6;
+    --accent:    #3D5A54;
+    --accent-bg: #EEF1EE;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{ background:var(--accent-bg); color:var(--accent); }
+
+  a{ color:var(--accent); text-decoration-color:var(--line); text-underline-offset:3px; }
+  a:hover{ text-decoration-color:var(--accent); }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:640px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- Header / Hero ---------- */
+
+  header{
+    padding:96px 0 64px;
+  }
+
+  .kicker{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+  }
+
+  h1{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:500;
+    font-size:44px;
+    line-height:1.15;
+    margin:0 0 22px;
+    letter-spacing:-0.01em;
+  }
+
+  header p.lede{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin:0 0 28px;
+  }
+
+  .header-links{
+    display:flex;
+    gap:22px;
+    font-size:15px;
+  }
+
+  /* ---------- Sections ---------- */
+
+  section{
+    padding:52px 0;
+    border-top:1px solid var(--line);
+  }
+
+  section h2{
+    font-family:'Source Serif 4', Georgia, serif;
+    font-weight:500;
+    font-size:24px;
+    margin:0 0 32px;
+  }
+
+  /* ---------- Entries (work / projects / writing) ---------- */
+
+  .entry{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:24px;
+    margin-bottom:34px;
+  }
+
+  .entry:last-child{ margin-bottom:0; }
+
+  .entry .when{
+    color:var(--ink-soft);
+    font-size:14px;
+    padding-top:3px;
+  }
+
+  .entry h3{
+    font-size:17px;
+    font-weight:500;
+    margin:0 0 6px;
+  }
+
+  .entry h3 .role{
+    color:var(--ink-soft);
+    font-weight:400;
+  }
+
+  .entry p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+
+  .entry .tags{
+    margin-top:10px;
+    font-size:13.5px;
+    color:var(--accent);
+  }
+
+  .entry .tags span:not(:last-child)::after{
+    content:"·";
+    margin:0 8px;
+    color:var(--line);
+  }
+
+  /* ---------- About ---------- */
+
+  #about p{
+    max-width:56ch;
+    margin:0 0 16px;
+  }
+  #about p:last-child{ margin-bottom:0; }
+
+  /* ---------- Contact ---------- */
+
+  #contact p{
+    color:var(--ink-soft);
+    max-width:48ch;
+    margin:0 0 20px;
+  }
+
+  .contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-size:16px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer{
+    padding:40px 0 80px;
+    color:var(--ink-soft);
+    font-size:13.5px;
+  }
+
+  /* ---------- Responsive ---------- */
+
+  @media (max-width:560px){
+    header{ padding:64px 0 44px; }
+    h1{ font-size:34px; }
+    .entry{ grid-template-columns:1fr; gap:6px; }
+    .entry .when{ padding-top:0; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="kicker">Joshua Obriant</p>
+    <h1>Mechanical and systems engineer, based in San Diego.</h1>
+    <p class="lede">Twenty years building things that move — from a fully autonomous vehicle in the Smithsonian to semiconductor fabrication systems used to make the chips in your phone.</p>
+    <div class="header-links">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section id="work">
+    <h2>Work</h2>
+
+    <div class="entry">
+      <div class="when">2020—2025</div>
+      <div>
+        <h3>Senior Mechanical Design Engineer <span class="role">at ASML (contract)</span></h3>
+        <p>Led a 7-person technical team delivering semiconductor fabrication subsystems, achieving 98% on-time release across simultaneous projects. Owned full product lifecycle from concept and CAD through release and build, and handed off 10+ production-ready systems valued at over $10M.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2014—2020</div>
+      <div>
+        <h3>Electro Mechanical Engineer <span class="role">in semiconductor fabrication</span></h3>
+        <p>Led and mentored a team of engineers designing mechanical, electrical, and optical systems — including laser and optical subsystems — for the computer chip industry. Ran design reviews and produced CAD models, documentation, and procedures for external vendors.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2010—2011</div>
+      <div>
+        <h3>Project Engineer <span class="role">at Ra Jones Electric (Oystar North America)</span></h3>
+        <p>Designed multimillion-dollar automated packaging machinery for industrial production, including the Keurig K-Cup machine. Developed a new frame concept that cut production cost by 30%.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2007—2008</div>
+      <div>
+        <h3>Engineer <span class="role">at United Technologies</span></h3>
+        <p>Member of the Boeing 787 Dreamliner components selection team. Designed and conducted qualification tests, and prepared performance documentation under FAA and ISO aviation standards.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2003—2008</div>
+      <div>
+        <h3>Chief Engineer <span class="role">at Axion</span></h3>
+        <p>Led the design and development of a fully autonomous unmanned vehicle, now on permanent display at the Smithsonian. Designed the real-time vehicle controller and integrated stereo cameras, laser rangefinders, sonar, radar, and GPS. Served as the team's safety lead and public spokesperson.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="when">2003—2007</div>
+      <div>
+        <h3>DARPA Grand Challenge</h3>
+        <p>Formed and led the Axion team's development of an autonomous vehicle capable of driving hundreds of miles on and off-road with no human control. The vehicle is now part of a permanent exhibit at the Smithsonian, and the project drew national press coverage, including Newsweek and Car and Driver.</p>
+        <div class="tags"><span>Autonomous vehicles</span><span>Sensor integration</span><span>Smithsonian exhibit</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2018—2019</div>
+      <div>
+        <h3>SurfUp</h3>
+        <p>Co-founded a startup with MBA classmates building an unmanned, automated surfboard rental kiosk — from concept and fundraising through a fabricated, deployed prototype. Managed the project cross-functionally and helped secure a patent.</p>
+        <div class="tags"><span>Startup</span><span>Consumer hardware</span><span>Patent awarded</span></div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2000—2005</div>
+      <div>
+        <h3>BattleBots</h3>
+        <p>Team lead designing and fabricating combat robots for national competition, with a focus on reliability engineering under repeated impact. Made several national television appearances representing the team.</p>
+        <div class="tags"><span>Robotics</span><span>Reliability engineering</span></div>
+      </div>
+    </div>
+  
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I'm a mechanical and systems engineer based in San Diego, with 20 years of experience across product design, manufacturing, and cross-functional team leadership — from semiconductor fabrication systems to autonomous vehicles to competitive combat robots. I hold an MBA from UC San Diego's Rady School of Business and a BS in Mechanical Engineering from San Diego State, and I'm a licensed Professional Engineer.</p>
+    <p>I'm currently open to new opportunities in mechanical engineering and engineering leadership, on-site or hybrid in San Diego County.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Get in touch</h2>
+    <p>I'm always glad to hear about opportunities in mechanical engineering and engineering leadership, or just to connect.</p>
+    <div class="contact-list">
+      <a href="mailto:jobriant@gmail.com">jobriant@gmail.com</a>
+      <a href="https://www.linkedin.com/in/joshuaobriant">linkedin.com/in/joshuaobriant</a>
+    </div>
+  </section>
+
+  <footer>
+    Joshua Obriant — updated August 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
